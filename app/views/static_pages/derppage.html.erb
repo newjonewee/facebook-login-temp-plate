@@ -8,23 +8,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-<div class="centor jumbotron">
+<body>
 
-<h3><% if signed_in? %>
-    Signed in as: <%= current_user.email %>
-    <%= button_to 'Sign out', sign_out_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign in', sign_in_path %>
-    <%= link_to 'Sign Up', sign_up_path %>
-    <a href="/auth/facebook/">log in with facebook</a>
- 
-  <% end %>
-</h3>
-  <div id="flash">
-    <% flash.each do |key, value| %>
-      <div class="flash <%= key %>"><%= value %></div>
-    <% end %>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Help page </h1>      
+    <p>buddy, you are in the wrong page if your looking for help, Becouse i don't know jack shit.</p>
   </div>
+        
+   <div class="center"> <p>here is a button to 9gag</p> <%= link_to "BIG BLUE BUTTON!", 'http://9gag.com/gag/azjRWAj', class: "btn btn-lg btn-primary" %> </div>
+     
 </div>
-  
- 
+
+</body>
+</html>

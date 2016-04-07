@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
+  get "/derp" => "static_pages#derppage"
+
   get 'home/index'
   root 'home#index'
+
   
   get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 
